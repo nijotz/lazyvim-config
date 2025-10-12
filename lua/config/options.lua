@@ -4,4 +4,5 @@
 
 vim.g.mapleader = "\\"
 vim.opt.wildmenu = true
-vim.opt.wildmode = { "longest:list" }
+vim.opt.wildmode = { "list:longest" }
+vim.opt.wildoptions = "pum"

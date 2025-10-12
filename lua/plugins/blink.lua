@@ -6,6 +6,9 @@ return {
         enabled = false,
       },
     },
+    cmdline = {
+      enabled = false,
+    },
     keymap = {
       preset = "default",
       ["<C-y>"] = { "select_and_accept" },
