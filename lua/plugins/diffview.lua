@@ -5,6 +5,17 @@ return {
     require("diffview").setup()
   end,
   keys = {
-    { "<leader>gD", "<cmd>DiffviewOpen<cr>", desc = "Git Diff View" },
+    {
+      "<leader>gD",
+      function()
+        local lib = require("diffview.lib")
+        if next(lib.views) == nil then
+          vim.cmd("DiffviewOpen")
+        else
+          vim.cmd("DiffviewClose")
+        end
+      end,
+      desc = "Git Diff View",
+    },
   },
 }
