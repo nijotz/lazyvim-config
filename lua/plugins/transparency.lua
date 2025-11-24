@@ -9,6 +9,10 @@ return {
         sidebars = "transparent",
         floats = "transparent",
       },
+      on_colors = function(colors)
+        colors.fg_gutter = "#6a6e7c"
+        colors.terminal_black = "#6a6e7c"
+      end,
     }
   end,
 }
