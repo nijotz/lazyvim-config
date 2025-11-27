@@ -13,6 +13,10 @@ return {
         colors.fg_gutter = "#6a6e7c"
         colors.terminal_black = "#6a6e7c"
       end,
+      on_highlights = function(hl)
+        hl.SnacksIndent = { fg = "#2f344d" }
+      end,
+      cache = false,
     }
   end,
 }
