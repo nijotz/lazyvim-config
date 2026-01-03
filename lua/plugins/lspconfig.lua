@@ -40,6 +40,8 @@ return {
           },
         },
       },
+      -- For TypeScript
+      vtsls = {},
     },
   },
 }
