@@ -42,6 +42,7 @@ return {
       },
       -- For TypeScript
       vtsls = {},
+      ts_ls = false,
     },
   },
 }
