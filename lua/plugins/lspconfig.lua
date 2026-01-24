@@ -3,19 +3,12 @@ return {
   opts = {
     inlay_hints = { enabled = false },
     servers = {
-      -- Turn off unwanted "hints" from pyright
-      -- https://github.com/microsoft/pyright/discussions/5852#discussioncomment-6874502
-      pyright = {
-        capabilities = {
-          textDocument = {
-            publishDiagnostics = {
-              tagSupport = {
-                valueSet = { 2 },
-              },
-            },
-          },
-        },
-      },
+      pyright = false,
+      basedpyright = false,
+      pylsp = false,
+
+      ty = {},
+
       ruff = {
         cmd_env = { RUFF_TRACE = "messages" },
         init_options = {
@@ -31,16 +24,7 @@ return {
           },
         },
       },
-      ruff_lsp = {
-        keys = {
-          {
-            "<leader>co",
-            LazyVim.lsp.action["source.organizeImports"],
-            desc = "Organize Imports",
-          },
-        },
-      },
-      -- For TypeScript
+
       vtsls = {},
       ts_ls = false,
     },

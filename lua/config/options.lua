@@ -8,3 +8,4 @@ vim.opt.wildmode = { "list:longest" }
 vim.opt.wildoptions = "pum"
 
 vim.opt.clipboard = ""
+vim.g.lazyvim_python_lsp = "ty"
