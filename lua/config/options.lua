@@ -6,3 +6,5 @@ vim.g.mapleader = "\\"
 vim.opt.wildmenu = true
 vim.opt.wildmode = { "list:longest" }
 vim.opt.wildoptions = "pum"
+
+vim.opt.clipboard = ""
