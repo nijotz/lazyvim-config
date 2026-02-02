@@ -5,7 +5,23 @@ return {
     servers = {
       pyright = false,
       basedpyright = false,
-      pylsp = false,
+      pylsp = {
+        autostart = false,
+        settings = {
+          pylsp = {
+            plugins = {
+              -- Disable everything except mypy
+              pycodestyle = { enabled = false },
+              pyflakes = { enabled = false },
+              pylint = { enabled = false },
+              mccabe = { enabled = false },
+              autopep8 = { enabled = false },
+              yapf = { enabled = false },
+              pylsp_mypy = { enabled = true, live_mode = false },
+            },
+          },
+        },
+      },
 
       ty = {},
 
