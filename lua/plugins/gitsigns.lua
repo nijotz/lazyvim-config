@@ -30,6 +30,11 @@ return {
       map("n", "<leader>ghS", gs.stage_buffer, "Stage Buffer")
       map("n", "<leader>ghu", gs.undo_stage_hunk, "Undo Stage Hunk")
       map("n", "<leader>ghR", gs.reset_buffer, "Reset Buffer")
+      map("n", "<leader>ghv", function()
+        local enabled = gs.toggle_deleted()
+        gs.toggle_linehl(enabled)
+        gs.toggle_word_diff(enabled)
+      end, "Toggle Inline Diff")
     end,
   },
 }
